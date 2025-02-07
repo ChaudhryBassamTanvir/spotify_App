@@ -1,6 +1,8 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React,{useState,useEffect } from 'react'
 
+
+import { setupPlayer,addTrack } from '../musicPlayerServices'
 const App = () => {
   return (
     <View>
