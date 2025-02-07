@@ -21,15 +21,20 @@ setIsPlayerReady(isSetup)
   }
 
 useEffect(()=>{
-
+setup()
 
 },[])
+
+if (!isPlayerReady) {
+  return
+  
+}
 
   return (
     <View>
       <Text>Spotify like clone</Text>
     </View>
-  )
+  )  
 }
 
 export default App
