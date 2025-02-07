@@ -11,6 +11,13 @@ const App = () => {
 
   async function setup() {
     let isSetup= await setupPlayer()
+
+if (isSetup) {
+  await addTrack()
+  
+}
+setIsPlayerReady(isSetup)
+
   }
 
 useEffect(()=>{
