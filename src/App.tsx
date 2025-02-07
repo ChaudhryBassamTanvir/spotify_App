@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { ActivityIndicator, SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React,{useState,useEffect } from 'react'
 
 
@@ -26,8 +26,14 @@ setup()
 },[])
 
 if (!isPlayerReady) {
-  return
-  
+  return 
+  (
+  <SafeAreaView>
+<ActivityIndicator/>
+
+
+  </SafeAreaView>
+  )
 }
 
   return (
