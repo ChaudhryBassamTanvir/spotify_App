@@ -13,7 +13,25 @@ const {position,duration}=useProgress()
       <Slider value={position} minimumValue={0}
       maximumValue={duration}
       thumbTintColor='#FFF'
-      />
+      maximumTrackTintColor='#FFF'
+   style={styles.sliderContainer}
+   
+   />
+
+   <View style={styles.timeContainer}>
+<Text style={styles.time}>
+
+{new Date(position*1000).toISOString().substring(15,19)}
+
+</Text>
+<Text style={styles.time}>
+
+{new Date((duration-position)*1000).toISOString().substring(15,19)}
+
+</Text>
+
+
+   </View>
     </View>
   )
 }
