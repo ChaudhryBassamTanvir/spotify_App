@@ -54,9 +54,16 @@ export default ControlCenter
 
 const styles = StyleSheet.create({
   container: {
-    // Add your styles here
+    marginBottom: 56,
+
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   icon: {
-    // Add your styles here
-  }
-})
+    color: '#FFFFFF',
+  },
+  playButton: {
+    marginHorizontal: 24,
+  },
+});
