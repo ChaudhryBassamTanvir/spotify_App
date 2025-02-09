@@ -15,11 +15,19 @@ const { width } = Dimensions.get('window');
 const MusicPlayer = () => {
     const [track, setTrack] = useState<Track | null>(null);
 
+    console.log("Bassam is ready");
+
     useTrackPlayerEvents([Event.PlaybackActiveTrackChanged], async event => {
         switch (event.type) {
             case Event.PlaybackActiveTrackChanged:
-                const playingTrack:any = await TrackPlayer.getTrack(event.nextTrack);
-                setTrack(playingTrack);
+                // Check if `event.index` is defined
+                if (event.index !== undefined) {
+                    const playingTrack = await TrackPlayer.getTrack(event.index);
+                    setTrack(playingTrack || null); // Handle the case where `playingTrack` is undefined
+                } else {
+                    // Handle the case where there is no active track
+                    setTrack(null);
+                }
                 break;
         }
     });

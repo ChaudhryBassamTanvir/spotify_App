@@ -25,15 +25,14 @@ setup()
 
 },[])
 
-if (!isPlayerReady) {
-  return 
-  (
+if (!isPlayerReady) { 
+  
   <SafeAreaView>
 <ActivityIndicator/>
 
 
   </SafeAreaView>
-  )
+  
 }
 
   return (
