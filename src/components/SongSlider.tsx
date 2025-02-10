@@ -54,6 +54,6 @@ const styles = StyleSheet.create({
     },
     time: {
       color: '#fff',
-      justifyContent:""
+     
     },
   });
